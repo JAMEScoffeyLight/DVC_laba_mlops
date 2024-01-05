@@ -1,0 +1,15 @@
+---
+- hosts: all
+  tasks:
+  - name: Copy flask app file to the prod-srv production server
+    copy:
+      src: /var/lib/jenkins/workspace/Titanic/scripts/production/app.py
+      dest: /home/prod-srv-admin/Titanic/scripts/production/app.py
+  - name: Installing flask module
+    pip:
+      executable: pip3
+      name: flask
+      state: latest
+  - name: run flask app
+    shell:
+      nohup python3 /home/prod-srv-admin/Titanic/scripts/production/app.py > log.txt 2>&1 &

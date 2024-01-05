@@ -1,0 +1,12 @@
+stages:
+  get-features:
+    cmd: python3 scripts/data_processing/data_edit.py data/raw/assessments.csv data/raw/courses.csv data/raw/studentAssessment.csv data/raw/studentInfo.csv data/raw/studentRegistration.csv
+    deps:
+    - data/raw/assessments.csv
+    - data/raw/courses.csv
+    - data/raw/studentAssessment.csv
+    - data/raw/studentInfo.csv
+    - data/raw/studentRegistration.csv
+    - scripts/data_processing/data_edit.py
+    outs:
+    - data/baseline
