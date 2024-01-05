@@ -1,0 +1,5 @@
+outs:
+- md5: 6126f9d435767bcc70134b46f21c2a90
+  size: 8200
+  hash: md5
+  path: assessments.csv

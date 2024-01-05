@@ -1,0 +1,5 @@
+outs:
+- md5: adbf1d802fb0dd02a6817249730ba377
+  size: 759556
+  hash: md5
+  path: studentRegistration.csv
